@@ -1,0 +1,29 @@
+@page
+@model pratica02.Pages.Carros.IndexModel
+@{
+    ViewData["Title"] = "Carros Cadastrados";
+}
+
+<h2>Carros Cadastrados</h2>
+
+<a asp-page="Create" class="btn btn-primary mb-3">Novo Cadastro</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Ano</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carro in Model.Carros)
+        {
+            <tr>
+                <td>@carro.Modelo</td>
+                <td>@carro.Marca</td>
+                <td>@carro.Ano</td>
+            </tr>
+        }
+    </tbody>
+</table>

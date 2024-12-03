@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/pratica02.props" />
+</Project>

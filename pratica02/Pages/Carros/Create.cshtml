@@ -1,0 +1,26 @@
+@page
+@model pratica02.Pages.Carros.CreateModel
+@{
+    ViewData["Title"] = "Cadastrar Carro";
+}
+
+<h2>Cadastro de Carro</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Carro.Modelo">Modelo</label>
+        <input asp-for="Carro.Modelo" class="form-control" />
+        <span asp-validation-for="Carro.Modelo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Carro.Marca">Marca</label>
+        <input asp-for="Carro.Marca" class="form-control" />
+        <span asp-validation-for="Carro.Marca" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Carro.Ano">Ano</label>
+        <input asp-for="Carro.Ano" class="form-control" />
+        <span asp-validation-for="Carro.Ano" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
